@@ -9,7 +9,7 @@ dotenv.config();
 
 
 router.get('/', (req, res) => {
-    res.send('hello')
+    res.json({"result":"true"})
 })
 
 router.post('/',  (req, res) => {
