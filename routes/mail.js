@@ -31,7 +31,7 @@ router.post('/',  (req, res) => {
         from: email,
         to: 'nabeeltech360@gmail.com',
         subject: `Message from ${email}: ${subject}`,
-        text:`${message} \n\n  from ${email}  \n\n Subject : ${subject} \n\n name ${name}`
+        text:`Message : ${message} \n\n Subject : ${subject} \n\n name ${name} \n\n from ${email}`
     }
 
     transport.sendMail(mailOptions, (error, info) => {
