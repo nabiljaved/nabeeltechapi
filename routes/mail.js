@@ -17,6 +17,7 @@ router.post('/',  (req, res) => {
     let email = req.body.email
     let subject = req.body.subject
     let message = req.body.message
+    let name = req.body.name
 
     const transport = nodemailer.createTransport({
         service:'gmail',
@@ -30,7 +31,7 @@ router.post('/',  (req, res) => {
         from: email,
         to: 'nabeeltech360@gmail.com',
         subject: `Message from ${email}: ${subject}`,
-        text:`${message} \n\n  from ${email}  \n\n Subject : ${subject}`
+        text:`${message} \n\n  from ${email}  \n\n Subject : ${subject} \\name ${name}`
     }
 
     transport.sendMail(mailOptions, (error, info) => {
